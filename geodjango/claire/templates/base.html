@@ -1,0 +1,81 @@
+{% load static %}
+<html lang="en">
+  {% load leaflet_tags %}
+  <head>
+    {% leaflet_js %}
+    {% leaflet_css %} 
+    <title>Adherent Map</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block content %}{% endblock content %}
+    <script src="{% static 'dist/leaflet.ajax.js' %}"></script>
+    <script src="{% static 'dist/leaflet.label.js' %}"></script> 
+   
+   
+   <link rel="stylesheet" href="{% static 'dist/L.multiControl.css' %}">
+   <link rel="stylesheet" href="{% static 'dist/leaflet-geojson-selector.css' %}">
+   <link rel="stylesheet" href="{% static 'dist/leaflet-geojson-selector.min.css' %}">
+   
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+   
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+       integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+   <script
+       src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
+   <link rel="stylesheet" href="{% static 'static/css/leaflet.css' %}" />
+   
+   <link rel="stylesheet" href="{% static 'static/css/styless.css' %}" />
+
+   
+
+   
+   
+</head>
+<style>
+    html { height: 100% }
+    body { height: 100%; margin: 0; padding: 0;}
+    #map{ height: 80% }
+    .class-tooltip{
+    background: rgba(12, 12, 126, 0.726);
+    border: 0.5px solid white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: white;
+  }
+   </style>
+
+<body>
+ 
+    <script src="//unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+    <script src="{% static 'static/js/leaflet.js' %}"></script>
+    <script src="{% static 'static/js/jquery.js' %}"></script>
+    <script src="{% static 'dist/leaflet-geojson-selector.min.js' %}"></script>
+    <script src="{% static 'dist/leaflet-geojson-selector.js' %}"></script>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+   
+  <h3> WEB-GIS</h3>
+  
+ 
+
+
+  
+ 
+  {% leaflet_map "map"  callback="window.out_layers" %}
+  </head>
+  </body>
+
+
+
+
+
+
+</html>
